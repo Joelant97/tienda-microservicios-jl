@@ -2,19 +2,27 @@
 <html>
 <head>
     <meta name="layout" content="main" />
+
+    <asset src="stylesheets/style.css"/>
+    <asset src="javascript/vendor/bootstrap/css/bootstrap.min.css"/>
+    <asset src="javascript/vendor/fonts/circular-std/style.css"/>
+    <asset src="javascript/vendor/fonts/fontawesome/css/fontawesome-all.css"/>
+    <asset src="javascript/vendor/daterangepicker/daterangepicker.css"/>
+    <asset src="javascript/vendor/jquery/jquery-3.3.1.min.js"/>
+
     <g:set var="entityName" value="${message(code: 'compra.label', default: 'Compra')}" />
     <title><g:message code="default.show.label" args="[entityName]" /></title>
 </head>
 <body>
-<a href="#show-departamento" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+<a href="#show-compra" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 <div class="nav" role="navigation">
     <ul>
-        <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+        <li><a class="home" href="${createLink(uri: '/create')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
         <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
     </ul>
 </div>
-<div id="show-departamento" class="content scaffold-show" role="main">
+<div id="show-compra" class="content scaffold-show" role="main">
     <h1><g:message code="default.show.label" args="[entityName]" /></h1>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
@@ -29,3 +37,4 @@
 </div>
 </body>
 </html>
+
