@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
     <meta name="layout" content="main" />
-
-    <asset src="stylesheets/style.css"/>
-    <asset src="javascript/vendor/bootstrap/css/bootstrap.min.css"/>
-    <asset src="javascript/vendor/fonts/circular-std/style.css"/>
-    <asset src="javascript/vendor/fonts/fontawesome/css/fontawesome-all.css"/>
-    <asset src="javascript/vendor/daterangepicker/daterangepicker.css"/>
-    <asset src="javascript/vendor/jquery/jquery-3.3.1.min.js"/>
 
 </head>
 

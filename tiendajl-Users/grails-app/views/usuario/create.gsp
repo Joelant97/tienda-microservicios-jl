@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="section-block" id="basicform">
-                    <h3 class="section-title"><g:message code="registrar.contacto"/></h3>
+                    <h3 class="section-title"><g:message code="registrar.usuario"/></h3>
                 </div>
 
                 <div class="card">
@@ -27,63 +27,43 @@
                         <div class="card-body">
 
                             <div class="form-group">
-                                <label for="nombre" class="col-form-label"><g:message code="nombre"/></label>
-                                <input id="nombre" type="text" class="form-control" name="nombre" required>
+                                <label for="username" class="col-form-label"><g:message code="username"/></label>
+                                <input id="username" type="text" class="form-control" name="username" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="apellido" class="col-form-label"><g:message code="apellido"/></label>
-                                <input id="apellido" type="text" class="form-control" name="apellido" required>
+                                <label for="enabled" class="col-form-label"><g:message code="enabled"/></label>
+                                <input id="enabled" type="text" class="form-control" name="enabled" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="telefono" class="col-form-label"><g:message code="telefono"/></label>
-                                <input id="telefono" type="text" class="form-control telefono" name="telefono">
+                                <label for="accountExpired" class="col-form-label"><g:message code="accountExpired"/></label>
+                                <input id="accountExpired" type="text" class="form-control" name="accountExpired">
                             </div>
 
                             <div class="form-group">
-                                <label for="movil" class="col-form-label"><g:message code="movil"/></label>
-                                <input id="movil" type="tel" class="form-control telefono" name="movil" required>
+                                <label for="accountLocked" class="col-form-label"><g:message code="accountLocked"/></label>
+                                <input id="accountLocked" type="text" class="form-control" name="accountLocked" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="puesto" class="col-form-label"><g:message code="puesto"/></label>
-                                <input id="puesto" type="text" class="form-control" name="puesto" required>
+                                <label for="passwordExperied" class="col-form-label"><g:message code="passwordExperied"/></label>
+                                <input id="passwordExperied" type="text" class="form-control" name="passwordExperied" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="direccion" class="col-form-label"><g:message code="direccion"/></label>
-                                <input id="direccion" type="text" class="form-control" name="direccion" required>
+                                <label for="dateCreated" class="col-form-label"><g:message code="dateCreated"/></label>
+                                <input id="dateCreated" type="date" class="form-control" name="dateCreated" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="inputEmail"><g:message code="correo"/></label>
-                                <input id="inputEmail" type="email" placeholder="name@example.com" name="email"
+                                <label for="lastUpdate"><g:message code="lastUpdate"/></label>
+                                <input id="lastUpdate" type="date" placeholder="11/29/2019" name="lastUpdate"
                                        class="form-control" required>
                             </div>
 
-                            <div class="form-group">
-                                <label for="categoria"><g:message code="categoria"/></label>
-                                <select id="categoria" name="categoria">
-                                    <option value="${null}" selected><g:message code="seleccione"/></option>
-                                    <g:each in="${categorias}" var="categoria">
-                                        <option value="${categoria.id}">${categoria.nombre}</option>
+                            %{--<input hidden name="usuario" value="${usuario.id}">--}%
 
-                                    </g:each>
-
-                                </select>
-
-                            </div>
-
-                            <div class="form-group">
-                                <label for="departamentos"><g:message code="departamento"/></label>
-                                <select name="departamentos" multiple="multiple" id="departamentos" style="width: 100%">
-
-                                </select>
-
-                            </div>
-
-                            <input hidden name="usuario" value="${usuario.id}">
 
                         </div>
 
@@ -109,7 +89,7 @@
                 </button>
             </div>
 
-            <g:form controller="contacto" action="existe">
+            <g:form controller="usuario" action="existe">
                 <div class="modal-body">
                     <label id="errores"></label>
 
@@ -129,134 +109,134 @@
 </div>
 
 
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
-<script>
-    $(document).ready(function () {
+%{--<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>--}%
+%{--<script>--}%
+    %{--$(document).ready(function () {--}%
 
-        $(".telefono").inputmask({"mask": "(999) 999-9999"});
+        %{--$(".telefono").inputmask({"mask": "(999) 999-9999"});--}%
 
-        $('#departamentos').select2({
-            width: 'resolve',
-            placeholder: '<g:message code="departamentos" /> ',
-            allowClear: true,
-            // templateResult: format,
-            // selectionAdapter: 'SingleSelection',
-            // templateSelection: format,
-            ajax: {
-                url: "/departamento/todos",
-                processResults: function (data) {
-                    data = data.map(function (departamento) {
-                        return {
-                            id: departamento.id,
-                            text: departamento.nombre,
-                            // otherfield: item.otherfield
-                        };
-                    });
-                    return {results: data};
-                },
-            },
-        });
+        %{--$('#departamentos').select2({--}%
+            %{--width: 'resolve',--}%
+            %{--placeholder: '<g:message code="departamentos" /> ',--}%
+            %{--allowClear: true,--}%
+            %{--// templateResult: format,--}%
+            %{--// selectionAdapter: 'SingleSelection',--}%
+            %{--// templateSelection: format,--}%
+            %{--ajax: {--}%
+                %{--url: "/departamento/todos",--}%
+                %{--processResults: function (data) {--}%
+                    %{--data = data.map(function (departamento) {--}%
+                        %{--return {--}%
+                            %{--id: departamento.id,--}%
+                            %{--text: departamento.nombre,--}%
+                            %{--// otherfield: item.otherfield--}%
+                        %{--};--}%
+                    %{--});--}%
+                    %{--return {results: data};--}%
+                %{--},--}%
+            %{--},--}%
+        %{--});--}%
 
-        $("#form").on("submit", function (e) {
-            // alert('entro');
-            e.preventDefault();
-            crear();
-        })
-    });
+        %{--$("#form").on("submit", function (e) {--}%
+            %{--// alert('entro');--}%
+            %{--e.preventDefault();--}%
+            %{--crear();--}%
+        %{--})--}%
+    %{--});--}%
 
-    function crear() {
-        $.ajax({
-            type: 'POST',
-            data: $('#form').serialize(),
-            url: "${g.createLink(controller:'contacto',action:'save')}",
-            success: function (res) {
-                if (res.valido !== 1) {
-                    alert("Errores al insertar: "+ res.errores.map(a => a.arguments[0] + ": " + a.arguments[2]));
+    %{--function crear() {--}%
+        %{--$.ajax({--}%
+            %{--type: 'POST',--}%
+            %{--data: $('#form').serialize(),--}%
+            %{--url: "${g.createLink(controller:'contacto',action:'save')}",--}%
+            %{--success: function (res) {--}%
+                %{--if (res.valido !== 1) {--}%
+                    %{--alert("Errores al insertar: "+ res.errores.map(a => a.arguments[0] + ": " + a.arguments[2]));--}%
 
-                    var uniqueErrors = res.errores.filter(it => (it.code === "unique"));
-                    if(uniqueErrors !== null) {
-                        var dialog = confirm("Existe un contacto con los campos: " +
-                            uniqueErrors.map(a => a.arguments[0] + ": " + a.arguments[2]) +
-                            "\nDesea agregar el departamento al contacto existente?");
-                        if(dialog == true)
-                            sendData(uniqueErrors);
-                    }
-                }
-                else {
-                    alert('guardado');
-                    window.location.replace("/contacto/index/")
-                }
-            }
-        })
-    }
+                    %{--var uniqueErrors = res.errores.filter(it => (it.code === "unique"));--}%
+                    %{--if(uniqueErrors !== null) {--}%
+                        %{--var dialog = confirm("Existe un contacto con los campos: " +--}%
+                            %{--uniqueErrors.map(a => a.arguments[0] + ": " + a.arguments[2]) +--}%
+                            %{--"\nDesea agregar el departamento al contacto existente?");--}%
+                        %{--if(dialog == true)--}%
+                            %{--sendData(uniqueErrors);--}%
+                    %{--}--}%
+                %{--}--}%
+                %{--else {--}%
+                    %{--alert('guardado');--}%
+                    %{--window.location.replace("/contacto/index/")--}%
+                %{--}--}%
+            %{--}--}%
+        %{--})--}%
+    %{--}--}%
 
-    function sendData(data) {
-        var XHR = new XMLHttpRequest();
-        var FD  = new FormData();
-        var select = document.getElementById("departamentos");
-        // Push our data into our FormData object
-        for(i in data) {
-            FD.append(data[i].arguments[0], data[i].arguments[2]);
-        }
-        var selectedValues  = Array(...select.options).reduce((acc, option) => {
-            if (option.selected === true) {
-                acc.push(option.value);
-            }
-            return acc;
-        }, []);
-        FD.append("departamentos", selectedValues);
+    %{--function sendData(data) {--}%
+        %{--var XHR = new XMLHttpRequest();--}%
+        %{--var FD  = new FormData();--}%
+        %{--var select = document.getElementById("departamentos");--}%
+        %{--// Push our data into our FormData object--}%
+        %{--for(i in data) {--}%
+            %{--FD.append(data[i].arguments[0], data[i].arguments[2]);--}%
+        %{--}--}%
+        %{--var selectedValues  = Array(...select.options).reduce((acc, option) => {--}%
+            %{--if (option.selected === true) {--}%
+                %{--acc.push(option.value);--}%
+            %{--}--}%
+            %{--return acc;--}%
+        %{--}, []);--}%
+        %{--FD.append("departamentos", selectedValues);--}%
 
-        // Define what happens on successful data submission
-        XHR.addEventListener('load', function(event) {
-            alert('Contacto Actualizado.');
-        });
+        %{--// Define what happens on successful data submission--}%
+        %{--XHR.addEventListener('load', function(event) {--}%
+            %{--alert('Contacto Actualizado.');--}%
+        %{--});--}%
 
-        // Define what happens in case of error
-        XHR.addEventListener('error', function(event) {
-            alert('Oops! Something went wrong.');
-        });
+        %{--// Define what happens in case of error--}%
+        %{--XHR.addEventListener('error', function(event) {--}%
+            %{--alert('Oops! Something went wrong.');--}%
+        %{--});--}%
 
-        // Set up our request
-        XHR.open('POST', '/contacto/existe');
+        %{--// Set up our request--}%
+        %{--XHR.open('POST', '/contacto/existe');--}%
 
-        // Send our FormData object; HTTP headers are set automatically
-        XHR.send(FD);
-    }
-    function mostrarErrores(errores) {
-        errors = errores.map(a => a.arguments[0] + ": " + a.arguments[2]);
-        document.getElementById("error").value = errors;
-        document.getElementById("errores").textContent = "Existe un contacto con los campos: " + errors +
-            "\nDesea agregar el departamento al contacto existente?" ;
+        %{--// Send our FormData object; HTTP headers are set automatically--}%
+        %{--XHR.send(FD);--}%
+    %{--}--}%
+    %{--function mostrarErrores(errores) {--}%
+        %{--errors = errores.map(a => a.arguments[0] + ": " + a.arguments[2]);--}%
+        %{--document.getElementById("error").value = errors;--}%
+        %{--document.getElementById("errores").textContent = "Existe un contacto con los campos: " + errors +--}%
+            %{--"\nDesea agregar el departamento al contacto existente?" ;--}%
 
 
-       /* $('#departamentosR').select2({
-            width: 'resolve',
-            placeholder: '<g:message code="departamentos" /> ',
-            allowClear: true,
-            // templateResult: format,
-            // selectionAdapter: 'SingleSelection',
-            // templateSelection: format,
-            ajax: {
-                url: "/departamento/todos",
-                processResults: function (data) {
-                    data = data.map(function (departamento) {
-                        return {
-                            id: departamento.id,
-                            text: departamento.nombre,
-                            // otherfield: item.otherfield
-                        };
-                    });
-                    return {results: data};
-                },
-            },
-        }); */
+       %{--/* $('#departamentosR').select2({--}%
+            %{--width: 'resolve',--}%
+            %{--placeholder: '<g:message code="departamentos" /> ',--}%
+            %{--allowClear: true,--}%
+            %{--// templateResult: format,--}%
+            %{--// selectionAdapter: 'SingleSelection',--}%
+            %{--// templateSelection: format,--}%
+            %{--ajax: {--}%
+                %{--url: "/departamento/todos",--}%
+                %{--processResults: function (data) {--}%
+                    %{--data = data.map(function (departamento) {--}%
+                        %{--return {--}%
+                            %{--id: departamento.id,--}%
+                            %{--text: departamento.nombre,--}%
+                            %{--// otherfield: item.otherfield--}%
+                        %{--};--}%
+                    %{--});--}%
+                    %{--return {results: data};--}%
+                %{--},--}%
+            %{--},--}%
+        %{--}); */--}%
 
-        //console.log('data: ' + $('#departamentos').val());
-        //$('#departamentosR').val([$('#departamentos').val()]);
-        $("#modal").modal("toggle");
-    }
+        %{--//console.log('data: ' + $('#departamentos').val());--}%
+        %{--//$('#departamentosR').val([$('#departamentos').val()]);--}%
+        %{--$("#modal").modal("toggle");--}%
+    %{--}--}%
 
-</script>
+%{--</script>--}%
 
 </body>
 </html>

@@ -29,7 +29,7 @@ class Usuario implements Serializable{
     }
 
     def beforeUpdate() {
-        if (this.isDirty('password')) { //TODO: verificar en en foro.
+        if (this.isDirty('password')) { //TODO: verificar en el foro.
             encodePassword()
         }
     }

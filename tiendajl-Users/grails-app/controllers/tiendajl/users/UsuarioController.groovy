@@ -18,8 +18,14 @@ class UsuarioController {
 
     }
 
-    def show(Long id) {
-        respond usuarioService.get(id)
+//    def show(Long id) {
+//        respond usuarioService.get(id)
+//    }
+
+    def show() {
+
+        def u = [usuario: Usuario.get(params.id)]
+        render(view: "show.gsp", model: u)
     }
 
     def create() {

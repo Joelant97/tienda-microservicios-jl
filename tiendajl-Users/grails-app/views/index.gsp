@@ -1,16 +1,8 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<!doctype html>
 <html>
 <head>
     <meta name="layout" content="main"/>
     <title>Influence</title>
-    <g file="img/logo.png" dir="images"/>
-
-    <asset:stylesheet src="style.css"/>
-    <asset:stylesheet src="vendor/bootstrap/css/bootstrap.min.css"/>
-    <asset:stylesheet src="vendor/fonts/circular-std/style.css"/>
-    <asset:stylesheet src="vendor/fonts/fontawesome/css/fontawesome-all.css"/>
-    <asset:stylesheet src="vendor/daterangepicker/daterangepicker.css"/>
-    <asset:javascript src="vendor/jquery/jquery-3.3.1.min.js"/>
 </head>
 <body>
     <content tag="nav">

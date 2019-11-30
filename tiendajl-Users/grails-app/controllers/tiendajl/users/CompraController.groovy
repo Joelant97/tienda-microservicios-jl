@@ -4,17 +4,17 @@ import grails.converters.JSON
 import grails.validation.ValidationException
 import tiendajl.users.auth.Usuario
 
-class CompraController {
 
+class CompraController {
 
 
     def CompraService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index() {
-
+    def list() {
         [compras: Compra.findAll()]
+
     }
 
 //    def show(Long id) {
@@ -24,8 +24,10 @@ class CompraController {
     def show() {
 
         def comp = [compra: Compra.get(params.id)]
-        render(view: "views/compra/index.gsp", model: comp)
+        render(view: "show.gsp", model: comp)
     }
+
+
 
     def create() {
         respond new Compra(params)

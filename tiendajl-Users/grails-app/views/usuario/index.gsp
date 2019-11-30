@@ -3,13 +3,6 @@
 <head>
     <meta name="layout" content="main"/>
 
-    %{--<asset src="stylesheets/style.css"/>--}%
-    %{--<asset src="javascript/vendor/bootstrap/css/bootstrap.min.css"/>--}%
-    %{--<asset src="javascript/vendor/fonts/circular-std/style.css"/>--}%
-    %{--<asset src="javascript/vendor/fonts/fontawesome/css/fontawesome-all.css"/>--}%
-    %{--<asset src="javascript/vendor/daterangepicker/daterangepicker.css"/>--}%
-    %{--<asset src="javascript/vendor/jquery/jquery-3.3.1.min.js"/>--}%
-
 </head>
 
 <body>
@@ -30,8 +23,12 @@
                                 <tr>
                                     <th scope="col"> <g:message code="username"/> </th>
                                     %{--<th scope="col">Usuario</th>--}%
+                                    <th scope="col"> <g:message code="enabled"/> </th>
+                                    <th scope="col"> <g:message code="accountExpired"/> </th>
+                                    <th scope="col"> <g:message code="accountLocked"/> </th>
+                                    <th scope="col"> <g:message code="passwordExperied"/> </th>
                                     <th scope="col"> <g:message code="dateCreated"/> </th>
-                                    <th scope="col"> <g:message code="compras"/> </th>
+                                    <th scope="col"> <g:message code="lastUpdated"/> </th>
 
                                 </tr>
                                 </thead>
@@ -39,21 +36,22 @@
                                 <g:each in="${usuarios}" var="usuario">
                                     <tr>
                                         <td>${usuario.username}</td>
-                                        %{--<td>${contacto.username}</td>--}%
-                                        <td>${usuario.dateCreated}</td>
+                                        <td>${usuario.enabled}</td>
                                         <td>${usuario.accountExpired}</td>
+                                        <td>${usuario.accountLocked}</td>
+                                        <td>${usuario.passwordExperied}</td>
+                                        <td>${usuario.dateCreated}</td>
+                                        <td>${usuario.lastUpdated}</td>
 
                                         <td>
                                             <ul>
                                                 <li>
                                                     <g:each in="${usuario.compras}" var="compra">
-                                                         ${compra.cliente}
+                                                        ${compra.cliente}    %{-- Puedes agregar la factura tambien --}%
                                                     </g:each>
                                                 </li>
                                             </ul>
                                         </td>
-
-
 
 
                                         <td align="center">
@@ -81,40 +79,45 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"> <g:message code="editar.contacto"/> </h5>
+                <h5 class="modal-title"> <g:message code="editar.usuario"/> </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <g:form action="update" controller="contacto"  method="PUT">
+            <g:form action="update" controller="usuario"  method="PUT">
                 <div class="modal-body">
                     <div class="form-group">
-                        %{--/////////////////////////////////////////////////--}%
-
-                        <td>${usuario.username}</td>
-                        %{--<td>${contacto.username}</td>--}%
-                        <td>${usuario.dateCreated}</td>
-                        <td>${usuario.accountExpired}</td>
-
-                        %{--////////////////////////////////////////////////////--}%
-
                         <input hidden name="usuario" value="">
                         <label for="username" class="col-form-label"> <g:message code="username"/> </label>
                         <input id="username" type="text" class="form-control" name="username" required>
-                        <label for="dateCreated" class="col-form-label"> <g:message code="dateCreated"/> </label>
-                        <input id="dateCreated" type="text" class="form-control" name="dateCreated" required>
+                        <label for="enabled" class="col-form-label"> <g:message code="enabled"/> </label>
+                        <input id="enabled" type="text" class="form-control" name="enabled" required>
                         <label for="accountExpired" class="col-form-label"> <g:message code="accountExpired"/> </label>
                         <input id="accountExpired" type="text" class="form-control" name="accountExpired" required>
+                        <label for="accountLocked" class="col-form-label"> <g:message code="accountLocked"/> </label>
+                        <input id="accountLocked" type="text" class="form-control" name="accountLocked" required>
+                        <label for="passwordExpired" class="col-form-label"> <g:message code="passwordExpired"/> </label>
+                        <input id="passwordExpired" type="text" class="form-control" name="passwordExpired" required>
+                        <label for="dateCreated" class="col-form-label"> <g:message code="dateCreated"/> </label>
+                        <input id="dateCreated" type="date" class="form-control" name="dateCreated" required>
+                        <label for="lastUpdated" class="col-form-label"> <g:message code="lastUpdated"/> </label>
+                        <input id="lastUpdated" type="date" class="form-control" name="lastUpdated" required>
 
-                        <label for="compras" class="col-form-label"> <g:message code="compras"/> </label>
-                        <select id="compras" name="compra">
-                            <g:each in="${compras}" var="compra">
-                                <option value="${compra.id}">${compra.cliente}</option>
-                            </g:each>
-                        </select>
+                        %{--<label for="departamentos" class="col-form-label"> <g:message code="departamentos"/> </label>--}%
+                        %{--<select id="departamentos" name="departamento">--}%
+                            %{--<g:each in="${departamentos}" var="departamento">--}%
+                                %{--<option value="${departamento.id}">${departamento.nombre}</option>--}%
+                            %{--</g:each>--}%
+                        %{--</select>--}%
+                        %{--<label for="categorias" class="col-form-label"> <g:message code="categorias"/> </label>--}%
+                        %{--<select id="categorias" name="categoria">--}%
+                            %{--<g:each in="${categorias}" var="categoria">--}%
+                                %{--<option value="${categoria.id}">${categoria.nombre}</option>--}%
+                            %{--</g:each>--}%
+                        %{--</select>--}%
 
-
-
+                        %{--<label for="categoria" class="col-form-label"> <g:message code="categoria"/> </label>--}%
+                        %{--<input id="categoria" type="text" class="form-control" name="categoria" required>--}%
                         <input hidden id="id" name="id">
                     </div>
                 </div>
@@ -155,11 +158,14 @@
                 // console.log(resp);
                 document.getElementById('id').value = resp.id;
                 document.getElementById('username').value = resp.username;
-                document.getElementById('dateCreated').value = resp.dateCreated;
+                document.getElementById('enabled').value = resp.enabled();
                 document.getElementById('accountExpired').value = resp.accountExpired;
-
-                // document.getElementById('compras').value = resp.compras.cliente;
-
+                document.getElementById('accountLocked').value = resp.accountLocked;
+                document.getElementById('passwordExpired').value = resp.passwordExpired;
+                document.getElementById('dateCreated').value = resp.dateCreated;
+                document.getElementById('lastUpdated').value = resp.lastUpdated;
+                // document.getElementById('departamentos').value = resp.departamentos.nombre;
+                // document.getElementById('categorias').value = resp.categorias.nombre;
 
 
 
