@@ -109,9 +109,8 @@
 </div>
 
 
-%{--<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>--}%
-%{--<script>--}%
-    %{--$(document).ready(function () {--}%
+<script>
+    $(document).ready(function () {
 
         %{--$(".telefono").inputmask({"mask": "(999) 999-9999"});--}%
 
@@ -137,106 +136,86 @@
             %{--},--}%
         %{--});--}%
 
-        %{--$("#form").on("submit", function (e) {--}%
-            %{--// alert('entro');--}%
-            %{--e.preventDefault();--}%
-            %{--crear();--}%
-        %{--})--}%
-    %{--});--}%
+        $("#form").on("submit", function (e) {
+            // alert('entro');
+            e.preventDefault();
+            crear();
+        })
+    });
 
-    %{--function crear() {--}%
-        %{--$.ajax({--}%
-            %{--type: 'POST',--}%
-            %{--data: $('#form').serialize(),--}%
-            %{--url: "${g.createLink(controller:'contacto',action:'save')}",--}%
-            %{--success: function (res) {--}%
-                %{--if (res.valido !== 1) {--}%
-                    %{--alert("Errores al insertar: "+ res.errores.map(a => a.arguments[0] + ": " + a.arguments[2]));--}%
+    function crear() {
+        $.ajax({
+            type: 'POST',
+            data: $('#form').serialize(),
+            url: "${g.createLink(controller:'usuario',action:'save')}",
+            success: function (res) {
+                if (res.valido !== 1) {
+                    alert("Errores al insertar: "+ res.errores.map(a => a.arguments[0] + ": " + a.arguments[2]));
 
-                    %{--var uniqueErrors = res.errores.filter(it => (it.code === "unique"));--}%
-                    %{--if(uniqueErrors !== null) {--}%
-                        %{--var dialog = confirm("Existe un contacto con los campos: " +--}%
-                            %{--uniqueErrors.map(a => a.arguments[0] + ": " + a.arguments[2]) +--}%
-                            %{--"\nDesea agregar el departamento al contacto existente?");--}%
-                        %{--if(dialog == true)--}%
-                            %{--sendData(uniqueErrors);--}%
-                    %{--}--}%
-                %{--}--}%
-                %{--else {--}%
-                    %{--alert('guardado');--}%
-                    %{--window.location.replace("/contacto/index/")--}%
-                %{--}--}%
-            %{--}--}%
-        %{--})--}%
-    %{--}--}%
+                    var uniqueErrors = res.errores.filter(it => (it.code === "unique"));
+                    if(uniqueErrors !== null) {
+                        var dialog = confirm("Existe un contacto con los campos: " +
+                            uniqueErrors.map(a => a.arguments[0] + ": " + a.arguments[2]) +
+                            "\nDesea agregar el departamento al contacto existente?");
+                        if(dialog == true)
+                            sendData(uniqueErrors);
+                    }
+                }
+                else {
+                    alert('guardado');
+                    window.location.replace("/usuario/index/")
+                }
+            }
+        })
+    }
 
-    %{--function sendData(data) {--}%
-        %{--var XHR = new XMLHttpRequest();--}%
-        %{--var FD  = new FormData();--}%
-        %{--var select = document.getElementById("departamentos");--}%
-        %{--// Push our data into our FormData object--}%
-        %{--for(i in data) {--}%
-            %{--FD.append(data[i].arguments[0], data[i].arguments[2]);--}%
-        %{--}--}%
-        %{--var selectedValues  = Array(...select.options).reduce((acc, option) => {--}%
-            %{--if (option.selected === true) {--}%
-                %{--acc.push(option.value);--}%
-            %{--}--}%
-            %{--return acc;--}%
-        %{--}, []);--}%
-        %{--FD.append("departamentos", selectedValues);--}%
+    function sendData(data) {
+        var XHR = new XMLHttpRequest();
+        var FD  = new FormData();
+        // var select = document.getElementById("departamentos");
 
-        %{--// Define what happens on successful data submission--}%
-        %{--XHR.addEventListener('load', function(event) {--}%
-            %{--alert('Contacto Actualizado.');--}%
-        %{--});--}%
+        // Push our data into our FormData object
+        for(i in data) {
+            FD.append(data[i].arguments[0], data[i].arguments[2]);
+        }
+        // var selectedValues  = Array(...select.options).reduce((acc, option) => {
+        //     if (option.selected === true) {
+        //         acc.push(option.value);
+        //     }
+        //     return acc;
+        // }, []);
+        // FD.append("departamentos", selectedValues);
 
-        %{--// Define what happens in case of error--}%
-        %{--XHR.addEventListener('error', function(event) {--}%
-            %{--alert('Oops! Something went wrong.');--}%
-        %{--});--}%
+        // Define what happens on successful data submission
+        XHR.addEventListener('load', function(event) {
+            alert('Usuario Actualizado.');
+        });
 
-        %{--// Set up our request--}%
-        %{--XHR.open('POST', '/contacto/existe');--}%
+        // Define what happens in case of error
+        XHR.addEventListener('error', function(event) {
+            alert('Oops! Something went wrong.');
+        });
 
-        %{--// Send our FormData object; HTTP headers are set automatically--}%
-        %{--XHR.send(FD);--}%
-    %{--}--}%
-    %{--function mostrarErrores(errores) {--}%
-        %{--errors = errores.map(a => a.arguments[0] + ": " + a.arguments[2]);--}%
-        %{--document.getElementById("error").value = errors;--}%
-        %{--document.getElementById("errores").textContent = "Existe un contacto con los campos: " + errors +--}%
-            %{--"\nDesea agregar el departamento al contacto existente?" ;--}%
+        // Set up our request
+        XHR.open('POST', '/usuario/existe');
+
+        // Send our FormData object; HTTP headers are set automatically
+        XHR.send(FD);
+    }
+    function mostrarErrores(errores) {
+        errors = errores.map(a => a.arguments[0] + ": " + a.arguments[2]);
+        document.getElementById("error").value = errors;
+        document.getElementById("errores").textContent = "Existe un usuario con los campos: " + errors +
+            "\nDesea agregar el departamento al contacto existente?" ;
 
 
-       %{--/* $('#departamentosR').select2({--}%
-            %{--width: 'resolve',--}%
-            %{--placeholder: '<g:message code="departamentos" /> ',--}%
-            %{--allowClear: true,--}%
-            %{--// templateResult: format,--}%
-            %{--// selectionAdapter: 'SingleSelection',--}%
-            %{--// templateSelection: format,--}%
-            %{--ajax: {--}%
-                %{--url: "/departamento/todos",--}%
-                %{--processResults: function (data) {--}%
-                    %{--data = data.map(function (departamento) {--}%
-                        %{--return {--}%
-                            %{--id: departamento.id,--}%
-                            %{--text: departamento.nombre,--}%
-                            %{--// otherfield: item.otherfield--}%
-                        %{--};--}%
-                    %{--});--}%
-                    %{--return {results: data};--}%
-                %{--},--}%
-            %{--},--}%
-        %{--}); */--}%
 
-        %{--//console.log('data: ' + $('#departamentos').val());--}%
-        %{--//$('#departamentosR').val([$('#departamentos').val()]);--}%
-        %{--$("#modal").modal("toggle");--}%
-    %{--}--}%
 
-%{--</script>--}%
+
+        $("#modal").modal("toggle");
+    }
+
+</script>
 
 </body>
 </html>

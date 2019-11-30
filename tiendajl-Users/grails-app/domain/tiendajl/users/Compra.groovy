@@ -1,5 +1,8 @@
 package tiendajl.users
 
+import grails.rest.Resource
+
+@Resource(uri='/comp')
 class Compra {
 
     String plan

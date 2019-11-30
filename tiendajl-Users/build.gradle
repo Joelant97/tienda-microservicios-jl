@@ -25,9 +25,11 @@ apply plugin:"asset-pipeline"
 apply plugin:"org.grails.grails-gsp"
 apply plugin:"org.grails.plugins.views-json"
 
+
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+    maven { url "http://dl.bintray.com/bobbywarner/grails-plugins" }
 }
 
 dependencies {
@@ -53,6 +55,13 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.1.16.Final"
     compile "org.grails.plugins:views-json"
     compile "org.grails.plugins:views-json-templates"
+    // https://mvnrepository.com/artifact/org.grails/grails-plugin-async
+    compile 'org.grails.plugins:http-builder-helper:1.1.0'
+
+    compile "org.grails:grails-plugin-rest"
+
+
+
 
     // https://mvnrepository.com/artifact/org.grails.plugins/asset-pipeline
     //    runtime group: 'org.grails.plugins', name: 'asset-pipeline', version: '2.11.0'
@@ -92,6 +101,8 @@ assets {
     minifyCss = true
     //configOptions = [commonJs: false] //useful for custom config on extension libraries
 }
+
+
 
 tasks.withType(Test) {
     systemProperty "geb.env", System.getProperty('geb.env')

@@ -2,7 +2,10 @@ package tiendajl.users
 
 import grails.converters.JSON
 import grails.validation.ValidationException
-import tiendajl.users.auth.Usuario
+//import tiendajl.users.auth.Usuario
+
+
+
 
 
 class CompraController {
@@ -15,7 +18,24 @@ class CompraController {
     def list() {
         [compras: Compra.findAll()]
 
-    }
+
+        withAsyncHttp(poolSize : 4, uri : "http://localhost:8080/compra/list", contentType : "application/json") {
+            def result = get(path: '/') { resp, json ->
+                println ' got async response!'
+                return json
+            }
+            assert result instanceof java.util.concurrent.Future
+
+            while (!result.done) {
+                println 'esperando...'
+                Thread.sleep(2000)
+            }
+
+        }
+
+
+
+        }
 
 //    def show(Long id) {
 //        respond compraService.get(id)
@@ -38,19 +58,19 @@ class CompraController {
         render compras as JSON
     }
 
-    def save() {
-        def usuario = (Usuario) getSession()
-        try {
-
-            def compra = new Compra(params)
-            compra.setCliente(usuario)
-            compra.save(flush: true, failOnError: true)
-
-        } catch (ValidationException e) {
-            println e
-        }
-        redirect(uri: '/')
-    }
+//    def save() {
+//        def usuario = (Usuario) getSession()
+//        try {
+//
+//            def compra = new Compra(params)
+//            compra.setCliente(usuario)
+//            compra.save(flush: true, failOnError: true)
+//
+//        } catch (ValidationException e) {
+//            println e
+//        }
+//        redirect(uri: '/')
+//    }
 
     def editar(Long id) {
         def compra = compraService.get(id)
