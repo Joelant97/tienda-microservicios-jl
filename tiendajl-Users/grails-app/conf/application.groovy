@@ -1,7 +1,0 @@
-
-
-grails {
-    assets {
-        commonJs = false
-    }
-}
