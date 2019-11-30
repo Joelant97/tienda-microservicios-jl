@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e28e84b-ead1-414a-b2bb-1187c13801fe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/tiendajl-auth/src/main/java/com/pucmm/auth/SpringTiendajlAuthApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/tiendajl-auth/src/main/java/com/pucmm/auth/SpringTiendajlAuthApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiendajl-auth/src/test/java/com/pucmm/auth/tests/SpringTiendajlServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tiendajl-auth/src/test/java/com/pucmm/auth/tests/SpringTiendajlServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiendajl-common/src/main/java/com/pucmm/common/SpringTiendajlCommonApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/tiendajl-common/src/main/java/com/pucmm/common/SpringTiendajlCommonApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiendajl-common/src/test/java/com/pucmm/common/tests/SpringTiendajlServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tiendajl-common/src/test/java/com/pucmm/common/tests/SpringTiendajlServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiendajl-server/src/main/java/com/pucmm/server/SpringTiendajlServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tiendajl-server/src/main/java/com/pucmm/server/SpringTiendajlServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiendajl-server/src/test/java/com/pucmm/server/tests/SpringTiendajlServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tiendajl-server/src/test/java/com/pucmm/server/tests/SpringTiendajlServerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiendajl-zuul/src/main/java/com/pucmm/zuul/SpringTiendajlZuulApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tiendajl-zuul/src/main/java/com/pucmm/zuul/SpringTiendajlZuulApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiendajl-zuul/src/test/java/com/pucmm/zuul/tests/SpringTiendajlZuulApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tiendajl-zuul/src/test/java/com/pucmm/zuul/tests/SpringTiendajlZuulApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,52 +16,6 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="$USER_HOME$/Desktop/Jhon/red-Social-Final" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Joel Final Web" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Joel Final Web/red-Social-Final/redsocial" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Nuevo 9" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Parcial 2 Web/instagram-Clone-Spark" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Parcial 2 Web/new/red-Social" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Parcial 2 Web/red-Social-Final" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Practica 10" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Quiz/grails-quiz-jhonyjoel" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/T4 Web/Blog_Orm" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/T4 Web/hibernet" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/T4 Web/hibernet-joel" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/T7 Web/practica7" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/T7 Web/sparkjava-restful" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/T8 Web/T8-cliente" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/T9 Web/practica_JSF_9" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Tarea 9/Shantall/Practica9" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Tarea 9/Shantall/Practica9-web" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Tarea 9/pract9-JJ" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/grails3-demo" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/practica10-master" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/practica9" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/Cliente Http" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/WorkSpace Web" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/WorkSpace Web/ClienteHttp-master" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/WorkSpace Web/Pract14" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/WorkSpace Web/electronicaPractica10" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/WorkSpace Web/hola_mundo_spring_boot" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/WorkSpace Web/p12" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/WorkSpace Web/practica12" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/WorkSpace Web/red-Social-Final" value="PREVIEW" />
-        <entry key="$USER_HOME$/Downloads/Tarea_Http-origin-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../Balanceadores" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../Practica10" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../electronicaPractica10" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../paypal" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../practica13" value="PREVIEW" />
-        <entry key="D:/WorkSpace Web Avanzada" value="PREVIEW" />
-        <entry key="D:/WorkSpace Web Avanzada/PF_Joel_Leo" value="PREVIEW" />
-        <entry key="D:/WorkSpace Web Avanzada/p12" value="PREVIEW" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -85,20 +31,11 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand />
       <select />
     </treeState>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -112,8 +49,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,11 +56,17 @@
               <item name="tienda-microservicios-jl" type="b2602c69:ProjectViewProjectNode" />
               <item name="tienda-microservicios-jl" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tienda-microservicios-jl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tienda-microservicios-jl" type="462c0819:PsiDirectoryNode" />
+              <item name="tiendajl-Users" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -154,44 +95,25 @@
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -205,55 +127,55 @@
       <option name="presentableId" value="Default" />
       <updated>1574856664525</updated>
       <workItem from="1574856666537" duration="2295000" />
+      <workItem from="1575140429250" duration="43000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2295000" />
+    <option name="totallyTimeSpent" value="2338000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="816" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286385" />
-      <window_info anchor="right" id="Palette&#9;" order="10" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5008091" side_tool="true" weight="0.32842416" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32928804" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286385" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286385" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49919093" weight="0.32842416" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49921754" visible="true" weight="0.27022654" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="SciView" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49921754" visible="true" weight="0.27383864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="4" sideWeight="0.5007825" side_tool="true" weight="0.26618123" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3286385" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.32928804" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3286385" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3286385" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286385" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286385" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286385" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3286385" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5008091" side_tool="true" weight="0.32842416" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49919093" weight="0.32842416" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3286385" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286385" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3286385" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32928804" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.32928804" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="SciView" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tiendajl-auth/src/main/java/com/pucmm/auth/SpringTiendajlAuthApp.java">
