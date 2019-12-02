@@ -42,7 +42,7 @@ class RolController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'rol.label', default: 'Rol'), rol.id])
+                flash.message = message(code: 'default.created.message', args: [message(code: 'role.label', default: 'Rol'), rol.id])
                 redirect rol
             }
             '*' { respond rol, [status: CREATED] }
@@ -68,7 +68,7 @@ class RolController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'rol.label', default: 'Rol'), rol.id])
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'role.label', default: 'Rol'), rol.id])
                 redirect rol
             }
             '*'{ respond rol, [status: OK] }
@@ -85,7 +85,7 @@ class RolController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'rol.label', default: 'Rol'), id])
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'role.label', default: 'Rol'), id])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
@@ -95,7 +95,7 @@ class RolController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'rol.label', default: 'Rol'), params.id])
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'role.label', default: 'Rol'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }

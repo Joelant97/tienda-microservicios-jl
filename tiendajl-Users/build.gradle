@@ -46,6 +46,11 @@ dependencies {
     compile "org.grails:grails-plugin-rest"
     compile "org.grails:grails-plugin-databinding"
     compile "org.grails:grails-plugin-i18n"
+    // https://mvnrepository.com/artifact/org.grails.plugins/spring-security-core
+    compile group: 'org.grails.plugins', name: 'spring-security-core', version: '3.1.0'
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: '4.2.3.RELEASE'
+
     compile "org.grails:grails-plugin-services"
     compile "org.grails:grails-plugin-url-mappings"
     compile "org.grails:grails-plugin-interceptors"
