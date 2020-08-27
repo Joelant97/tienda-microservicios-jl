@@ -1,6 +1,7 @@
 package micro.servicio.clienteweb.controladores;
 
 import micro.servicio.clienteweb.entidades.notificaciones.Notificacion;
+import micro.servicio.clienteweb.entidades.productos.Estadisticas;
 import micro.servicio.clienteweb.entidades.productos.Orden;
 import micro.servicio.clienteweb.entidades.productos.Plan;
 import micro.servicio.clienteweb.entidades.usuarios.Usuario;
@@ -25,7 +26,7 @@ public class AplicacionControlador {
             modelo.addAttribute("planesCarrito", planes);
         }
 
-        modelo.addAttribute("estadistica", RestUtil.getInstance().getOrdenEstadisticas());
+        modelo.addAttribute("estadistica", new Estadisticas(1,1,1));
         modelo.addAttribute("planes", RestUtil.getInstance().getPlanes());
         modelo.addAttribute("usuario", RestUtil.getInstance().getUsuario(principal.getName()));
         return "index";
