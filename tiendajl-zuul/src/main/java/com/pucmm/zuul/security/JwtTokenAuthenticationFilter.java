@@ -1,5 +1,5 @@
-package com.eureka.zuul.security;
-
+package com.pucmm.zuul.security;
+/*
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,7 +14,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.eureka.common.security.JwtConfig;
+
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -82,4 +82,4 @@ public class JwtTokenAuthenticationFilter extends  OncePerRequestFilter {
 		chain.doFilter(request, response);
 	}
 
-}
+}*/

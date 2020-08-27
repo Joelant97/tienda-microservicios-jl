@@ -1,5 +1,5 @@
-package com.eureka.zuul.security;
-
+package com.pucmm.zuul.security;
+/*
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,3 +45,4 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
     	   return new JwtConfig();
   	}
 }
+*/
