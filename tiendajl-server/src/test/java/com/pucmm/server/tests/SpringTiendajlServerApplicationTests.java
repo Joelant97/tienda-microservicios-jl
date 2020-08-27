@@ -1,4 +1,4 @@
-package com.eureka.server.tests;
+package com.pucmm.server.tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
