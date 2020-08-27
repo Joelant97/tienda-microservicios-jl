@@ -6,6 +6,7 @@ import micro.servicio.clienteweb.entidades.productos.Orden;
 import micro.servicio.clienteweb.entidades.productos.Plan;
 import micro.servicio.clienteweb.entidades.usuarios.CambiarContrasena;
 import micro.servicio.clienteweb.entidades.usuarios.Usuario;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -20,7 +21,8 @@ public class RestUtil {
     private static RestUtil restUtil;
     private static RestTemplate restTemplate;
     private HttpHeaders headers;
-    private String host = "http://localhost:8080/";
+    @Value("${gateway.uri}")
+    private String host;
 
     private String usuarioToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiJ9.a3Eut26boxzlWFPn7l7JOWDcJAN_o024HJpWMjtjjt4";
 
