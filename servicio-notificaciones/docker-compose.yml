@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  servicio-notificaciones:
+    image: servicio-notificaciones-2128:latest
+    ports:
+      - 2128:2128
